@@ -1,0 +1,31 @@
+node_modules/
+
+.pnpm/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# dotenv environment variables file
+.env
+
+dist/
+
+node_modules/@prisma/client/
+
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+# Mac
+.DS_Store
+
+coverage/
+
+jest.config.js

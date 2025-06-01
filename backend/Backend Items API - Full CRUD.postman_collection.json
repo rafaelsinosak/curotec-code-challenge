@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "c6771c93-0350-4bab-aa61-1583dd07141c",
+		"name": "Backend Items API - Full CRUD",
+		"description": "Postman collection with full CRUD endpoints for `/api/items`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2340025",
+		"_collection_link": "https://relable.postman.co/workspace/Relable-Workspace~52706a68-471e-4463-9bc5-bf84e94f433f/collection/2340025-c6771c93-0350-4bab-aa61-1583dd07141c?action=share&source=collection_link&creator=2340025"
+	},
+	"item": [
+		{
+			"name": "GET All Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/items",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items"
+					]
+				},
+				"description": "Retrieve the full list of items"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Item by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/items/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Retrieve a single item by its ID (replace `:id` with the item’s numeric ID)"
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"New item name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/items",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items"
+					]
+				},
+				"description": "Create a new item. Adjust the `name` field as needed."
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated item name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/items/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Update the name of an existing item. Replace `:id` and adjust the `name` field."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/items/:id",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"items",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Delete the item identified by `:id`"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3001/api",
+			"type": "string"
+		}
+	]
+}
